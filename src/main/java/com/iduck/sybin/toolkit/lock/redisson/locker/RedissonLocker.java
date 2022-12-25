@@ -15,6 +15,8 @@ import java.util.concurrent.TimeUnit;
 public class RedissonLocker {
     private static final Logger log = LoggerFactory.getLogger(RedissonLocker.class);
 
+    private static final String LOCK_KEY_PREFIX = "lock:";
+
     private String lockKey;
 
     private RedissonClient redissonClient;
@@ -29,7 +31,7 @@ public class RedissonLocker {
         if (expire != -1) {
             setExpire(expire);
         }
-        RLock lock = this.redissonClient.getLock(this.lockKey);
+        RLock lock = this.redissonClient.getLock(LOCK_KEY_PREFIX + this.lockKey);
         try {
             return lock.tryLock(timeUnit.toSeconds(this.expire), TimeUnit.SECONDS);
         } catch (InterruptedException e) {
@@ -39,7 +41,7 @@ public class RedissonLocker {
     }
 
     public void unLock() {
-        this.redissonClient.getLock(this.lockKey).unlock();
+        this.redissonClient.getLock(LOCK_KEY_PREFIX + this.lockKey).unlock();
     }
 
     public RedissonLocker(String lockKey, RedissonClient redissonClient) {
