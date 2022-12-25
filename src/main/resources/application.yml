@@ -1,0 +1,23 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: iduck-framework-toolkit
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    timeout: 20000
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
+thread-pool:
+  config:
+    prefix-name: hahaha
+    keep-alive-time: 600
+    blocking-queue-length: 1000
+    corePoolSize: 5
+    maximum-pool-size: 10

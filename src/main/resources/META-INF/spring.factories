@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.iduck.sybin.toolkit.security.autoconfiguration.SecurityAutoConfiguration
+com.iduck.sybin.toolkit.security.autoconfiguration.JwtAutoConfiguration
+com.iduck.sybin.toolkit.thread.autoconfiguration.ThreadPoolAutoConfiguration
+com.iduck.sybin.toolkit.lock.redisson.autoconfiguration.RedissonAutoConfiguration
