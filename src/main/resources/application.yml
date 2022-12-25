@@ -21,3 +21,9 @@ thread-pool:
     blocking-queue-length: 1000
     corePoolSize: 5
     maximum-pool-size: 10
+idk:
+  redisson:
+    config:
+      address: 127.0.0.1:6379
+      database: 0
+      model: single
