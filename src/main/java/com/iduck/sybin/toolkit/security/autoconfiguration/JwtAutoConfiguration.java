@@ -22,7 +22,7 @@ public class JwtAutoConfiguration {
     @Autowired
     JwtProperties jwtProperties;
 
-    @Bean
+    @Bean("jwtUtils")
     @ConditionalOnMissingBean(JwtUtils.class)
     public JwtUtils jwtUtils() {
         return new JwtUtils(jwtProperties);

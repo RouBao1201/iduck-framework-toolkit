@@ -9,11 +9,11 @@ import org.springframework.web.client.RestTemplate;
  * @copyright 2022-2099 SongYanBin All Rights Reserved.
  * @since 2022/12/23
  **/
-public class RestAdaptor {
+public class RestAdapter {
 
     private final RestTemplate restTemplate;
 
-    public RestAdaptor(RestTemplate restTemplate) {
+    public RestAdapter(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 

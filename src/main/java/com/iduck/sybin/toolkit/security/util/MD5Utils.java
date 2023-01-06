@@ -9,6 +9,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
+ * MD5加密工具类
+ *
  * @author SongYanBin
  * @copyright ©2022-2099 SongYanBin. All rights reserved.
  * @since 2022/12/9

@@ -1,6 +1,6 @@
 package com.iduck.sybin.toolkit.redis;
 
-import com.iduck.sybin.toolkit.redis.util.RedisAdaptor;
+import com.iduck.sybin.toolkit.redis.util.RedisAdapter;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +17,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class RedisAdaptorTest {
 
     @Autowired
-    RedisAdaptor redisAdaptor;
+    RedisAdapter redisAdapter;
 
     @Test
     public void test01() {
-        redisAdaptor.set("boss", "SongYanBin");
-        redisAdaptor.set("boss-ZH", "宋延彬");
+        redisAdapter.set("boss", "SongYanBin");
+        redisAdapter.set("boss-ZH", "宋延彬");
     }
 }

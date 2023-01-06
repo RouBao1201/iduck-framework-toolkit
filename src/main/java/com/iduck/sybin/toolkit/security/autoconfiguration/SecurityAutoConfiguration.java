@@ -11,6 +11,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * 安全加密工具自动装配类
+ *
  * @author SongYanBin
  * @copyright ©2022-2099 SongYanBin. All rights reserved.
  * @since 2022/12/9
@@ -22,19 +24,19 @@ public class SecurityAutoConfiguration {
     @Autowired
     SecurityKeyProperties securityKeyProperties;
 
-    @Bean
+    @Bean("aesUtils")
     @ConditionalOnMissingBean(AESUtils.class)
     public AESUtils aesUtils() {
         return new AESUtils(securityKeyProperties);
     }
 
-    @Bean
+    @Bean("md5Utils")
     @ConditionalOnMissingBean(MD5Utils.class)
     public MD5Utils md5Utils() {
         return new MD5Utils(securityKeyProperties);
     }
 
-    @Bean
+    @Bean("rsaUtils")
     @ConditionalOnMissingBean(RSAUtils.class)
     public RSAUtils rsaUtils() {
         return new RSAUtils(securityKeyProperties);

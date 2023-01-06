@@ -1,6 +1,6 @@
 package com.iduck.sybin.toolkit.rest.config;
 
-import com.iduck.sybin.toolkit.rest.util.RestAdaptor;
+import com.iduck.sybin.toolkit.rest.util.RestAdapter;
 import okhttp3.OkHttpClient;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
@@ -21,16 +21,16 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 public class RestConfig {
 
-    @Bean
+    @Bean("restTemplate")
     @ConditionalOnMissingBean(RestTemplate.class)
     public RestTemplate restTemplate() {
         return new RestTemplate(getOkHttpClient());
     }
 
-    @Bean
-    @ConditionalOnMissingBean(RestAdaptor.class)
-    public RestAdaptor restAdapter(RestTemplate restTemplate) {
-        return new RestAdaptor(restTemplate);
+    @Bean("restAdapter")
+    @ConditionalOnMissingBean(RestAdapter.class)
+    public RestAdapter restAdapter(RestTemplate restTemplate) {
+        return new RestAdapter(restTemplate);
     }
 
     private ClientHttpRequestFactory getOkHttpClient() {

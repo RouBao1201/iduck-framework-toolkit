@@ -1,6 +1,6 @@
 package com.iduck.sybin.toolkit.redis.config;
 
-import com.iduck.sybin.toolkit.redis.util.RedisAdaptor;
+import com.iduck.sybin.toolkit.redis.util.RedisAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -39,8 +39,8 @@ public class RedisConfig {
         return redisTemplate;
     }
 
-    @Bean("redisAdaptor")
-    public RedisAdaptor redisAdaptor(RedisTemplate<String, Object> redisTemplate) {
-        return new RedisAdaptor(redisTemplate);
+    @Bean("redisAdapter")
+    public RedisAdapter redisAdaptor(RedisTemplate<String, Object> redisTemplate) {
+        return new RedisAdapter(redisTemplate);
     }
 }

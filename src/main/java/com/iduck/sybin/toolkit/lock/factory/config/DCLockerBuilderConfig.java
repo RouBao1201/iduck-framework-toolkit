@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 /**
+ * 分布式锁构造器配置类
+ *
  * @author SongYanBin
  * @copyright 2022-2099 SongYanBin All Rights Reserved.
  * @since 2022/12/23

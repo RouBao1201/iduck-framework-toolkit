@@ -9,7 +9,7 @@ import cn.hutool.core.util.StrUtil;
  * @copyright 2022-2099 SongYanBin All Rights Reserved.
  * @since 2022/12/22
  **/
-public class BaseException extends RuntimeException {
+public class BaseException extends Exception {
     private String code;
 
     private String localMsg;

@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: iduck-framework-toolkit
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/iduckcoms
   redis:
     database: 0
     host: localhost

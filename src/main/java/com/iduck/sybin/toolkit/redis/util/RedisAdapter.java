@@ -16,12 +16,12 @@ import java.util.concurrent.TimeUnit;
  * @copyright 2022-2099 SongYanBin All Rights Reserved.
  * @since 2022/12/23
  **/
-public class RedisAdaptor {
-    private static final Logger log = LoggerFactory.getLogger(RedisAdaptor.class);
+public class RedisAdapter {
+    private static final Logger log = LoggerFactory.getLogger(RedisAdapter.class);
 
     private final RedisTemplate<String, Object> redisTemplate;
 
-    public RedisAdaptor(RedisTemplate<String, Object> redisTemplate) {
+    public RedisAdapter(RedisTemplate<String, Object> redisTemplate) {
         this.redisTemplate = redisTemplate;
     }
 
