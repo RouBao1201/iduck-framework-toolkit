@@ -1,6 +1,6 @@
 package com.iduck.sybin.toolkit.redis;
 
-import com.iduck.sybin.toolkit.redis.util.RedisAdapter;
+import com.iduck.sybin.toolkit.redis.bean.RedisAdapter;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

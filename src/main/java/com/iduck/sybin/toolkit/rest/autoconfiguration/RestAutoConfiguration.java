@@ -1,6 +1,6 @@
 package com.iduck.sybin.toolkit.rest.autoconfiguration;
 
-import com.iduck.sybin.toolkit.rest.util.RestAdapter;
+import com.iduck.sybin.toolkit.rest.bean.RestAdapter;
 import okhttp3.OkHttpClient;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;

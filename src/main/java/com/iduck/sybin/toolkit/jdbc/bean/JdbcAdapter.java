@@ -1,4 +1,4 @@
-package com.iduck.sybin.toolkit.jdbc.util;
+package com.iduck.sybin.toolkit.jdbc.bean;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.iduck.sybin.toolkit.thread.util;
+package com.iduck.sybin.toolkit.thread.bean;
 
 import cn.hutool.core.thread.ThreadFactoryBuilder;
 import com.iduck.sybin.toolkit.thread.config.ThreadPoolRejectedHandler;

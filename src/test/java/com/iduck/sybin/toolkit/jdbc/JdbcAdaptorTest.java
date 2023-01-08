@@ -1,8 +1,8 @@
 package com.iduck.sybin.toolkit.jdbc;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.iduck.sybin.toolkit.jdbc.util.JdbcAdapter;
-import com.iduck.sybin.toolkit.jdbc.util.TransactionUtils;
+import com.iduck.sybin.toolkit.jdbc.bean.JdbcAdapter;
+import com.iduck.sybin.toolkit.jdbc.bean.TransactionUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.iduck.sybin.toolkit.thread;
 
-import com.iduck.sybin.toolkit.thread.util.ThreadPoolHolder;
+import com.iduck.sybin.toolkit.thread.bean.ThreadPoolHolder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

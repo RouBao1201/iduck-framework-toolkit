@@ -1,4 +1,4 @@
-package com.iduck.sybin.toolkit.jdbc.util;
+package com.iduck.sybin.toolkit.jdbc.bean;
 
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.TransactionDefinition;

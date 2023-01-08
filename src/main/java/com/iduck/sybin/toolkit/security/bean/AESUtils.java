@@ -1,4 +1,4 @@
-package com.iduck.sybin.toolkit.security.util;
+package com.iduck.sybin.toolkit.security.bean;
 
 import cn.hutool.core.util.StrUtil;
 import com.iduck.sybin.toolkit.security.properties.SecurityKeyProperties;

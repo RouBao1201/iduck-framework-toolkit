@@ -1,4 +1,4 @@
-package com.iduck.sybin.toolkit.rest.util;
+package com.iduck.sybin.toolkit.rest.bean;
 
 import org.springframework.web.client.RestTemplate;
 

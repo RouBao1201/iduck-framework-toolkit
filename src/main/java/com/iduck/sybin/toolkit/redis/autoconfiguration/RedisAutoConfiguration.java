@@ -1,7 +1,7 @@
 package com.iduck.sybin.toolkit.redis.autoconfiguration;
 
 import com.iduck.sybin.toolkit.redis.config.FastJson2JsonRedisSerializer;
-import com.iduck.sybin.toolkit.redis.util.RedisAdapter;
+import com.iduck.sybin.toolkit.redis.bean.RedisAdapter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

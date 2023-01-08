@@ -1,4 +1,4 @@
-package com.iduck.sybin.toolkit.redis.util;
+package com.iduck.sybin.toolkit.redis.bean;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

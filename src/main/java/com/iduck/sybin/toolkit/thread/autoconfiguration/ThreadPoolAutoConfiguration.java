@@ -1,7 +1,7 @@
 package com.iduck.sybin.toolkit.thread.autoconfiguration;
 
 import com.iduck.sybin.toolkit.thread.properties.ThreadPoolProperties;
-import com.iduck.sybin.toolkit.thread.util.ThreadPoolHolder;
+import com.iduck.sybin.toolkit.thread.bean.ThreadPoolHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

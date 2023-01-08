@@ -1,6 +1,6 @@
 package com.iduck.sybin.toolkit.jdbc.autoconfiguration;
 
-import com.iduck.sybin.toolkit.jdbc.util.TransactionUtils;
+import com.iduck.sybin.toolkit.jdbc.bean.TransactionUtils;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

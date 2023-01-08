@@ -1,9 +1,9 @@
 package com.iduck.sybin.toolkit.security.autoconfiguration;
 
 import com.iduck.sybin.toolkit.security.properties.SecurityKeyProperties;
-import com.iduck.sybin.toolkit.security.util.AESUtils;
-import com.iduck.sybin.toolkit.security.util.MD5Utils;
-import com.iduck.sybin.toolkit.security.util.RSAUtils;
+import com.iduck.sybin.toolkit.security.bean.AESUtils;
+import com.iduck.sybin.toolkit.security.bean.MD5Utils;
+import com.iduck.sybin.toolkit.security.bean.RSAUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
