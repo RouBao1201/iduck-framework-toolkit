@@ -1,5 +1,6 @@
 package com.iduck.sybin.toolkit.common.util;
 
+import com.iduck.sybin.toolkit.common.functions.ConsumerFunction;
 import com.iduck.sybin.toolkit.common.functions.EitherHandleFunction;
 
 import java.util.Collection;
@@ -13,6 +14,34 @@ import java.util.Map;
  * @since 2023/1/8
  **/
 public class FcUtils {
+    /**
+     * 若为true则执行逻辑
+     *
+     * @param flag 标志
+     * @return 执行逻辑
+     */
+    public static ConsumerFunction isTrue(boolean flag) {
+        return (runnable) -> {
+            if (flag) {
+                runnable.run();
+            }
+        };
+    }
+
+    /**
+     * 若为false则执行逻辑
+     *
+     * @param flag 标志
+     * @return 执行逻辑
+     */
+    public static ConsumerFunction isFalse(boolean flag) {
+        return (runnable) -> {
+            if (!flag) {
+                runnable.run();
+            }
+        };
+    }
+
     /**
      * 分支判断
      *
