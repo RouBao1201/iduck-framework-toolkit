@@ -1,6 +1,6 @@
 package com.iduck.sybin.toolkit.jdbc.autoconfiguration;
 
-import com.iduck.sybin.toolkit.jdbc.bean.TransactionUtils;
+import com.iduck.sybin.toolkit.jdbc.bean.TransactionHandler;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,11 +14,11 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
  * @since 2022/12/28
  **/
 @Configuration
-public class TransactionUtilsConfig {
+public class TransactionHandlerAutoConfiguration {
 
     @Bean
-    @ConditionalOnMissingBean(TransactionUtils.class)
-    public TransactionUtils transactionUtils(DataSourceTransactionManager dataSourceTransaction) {
-        return new TransactionUtils(dataSourceTransaction);
+    @ConditionalOnMissingBean(TransactionHandler.class)
+    public TransactionHandler transactionUtils(DataSourceTransactionManager dataSourceTransaction) {
+        return new TransactionHandler(dataSourceTransaction);
     }
 }

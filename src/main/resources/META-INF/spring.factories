@@ -4,6 +4,6 @@ com.iduck.sybin.toolkit.security.autoconfiguration.JwtAutoConfiguration
 com.iduck.sybin.toolkit.thread.autoconfiguration.ThreadPoolAutoConfiguration
 com.iduck.sybin.toolkit.lock.redisson.autoconfiguration.RedissonAutoConfiguration
 com.iduck.sybin.toolkit.rest.autoconfiguration.RestAutoConfiguration
-com.iduck.sybin.toolkit.jdbc.autoconfiguration.JdbcAdaptorConfig
-com.iduck.sybin.toolkit.jdbc.autoconfiguration.TransactionUtilsConfig
+com.iduck.sybin.toolkit.jdbc.autoconfiguration.JdbcAdapterAutoConfiguration
+com.iduck.sybin.toolkit.jdbc.autoconfiguration.TransactionHandlerAutoConfiguration
 com.iduck.sybin.toolkit.redis.autoconfiguration.RedisAutoConfiguration

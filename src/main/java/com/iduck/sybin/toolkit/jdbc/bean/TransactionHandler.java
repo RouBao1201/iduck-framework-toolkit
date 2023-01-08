@@ -13,11 +13,11 @@ import org.springframework.transaction.support.DefaultTransactionDefinition;
  * @copyright 2022-2099 SongYanBin All Rights Reserved.
  * @since 2022/12/28
  **/
-public class TransactionUtils {
+public class TransactionHandler {
 
     private final DataSourceTransactionManager dataSourceTransactionManager;
 
-    public TransactionUtils(DataSourceTransactionManager dataSourceTransactionManager) {
+    public TransactionHandler(DataSourceTransactionManager dataSourceTransactionManager) {
         this.dataSourceTransactionManager = dataSourceTransactionManager;
     }
 

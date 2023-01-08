@@ -1,6 +1,6 @@
 package com.iduck.sybin.toolkit.thread;
 
-import com.iduck.sybin.toolkit.thread.bean.ThreadPoolHolder;
+import com.iduck.sybin.toolkit.thread.bean.ThreadPoolHandler;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ import java.util.concurrent.Future;
 public class ThreadPoolHolderTest {
 
     @Autowired
-    ThreadPoolHolder threadPoolHolder;
+    ThreadPoolHandler threadPoolHolder;
 
     @Test
     public void test01() {

@@ -21,14 +21,14 @@ import java.util.concurrent.TimeUnit;
  * @copyright 2022-2099 SongYanBin All Rights Reserved.
  * @since 2022/12/23
  **/
-public class ThreadPoolHolder {
-    private static final Logger log = LoggerFactory.getLogger(ThreadPoolHolder.class);
+public class ThreadPoolHandler {
+    private static final Logger log = LoggerFactory.getLogger(ThreadPoolHandler.class);
 
     private static ThreadPoolExecutor threadPoolExecutor = null;
 
     private final ThreadPoolProperties threadPoolProperties;
 
-    public ThreadPoolHolder(ThreadPoolProperties threadPoolProperties) {
+    public ThreadPoolHandler(ThreadPoolProperties threadPoolProperties) {
         this.threadPoolProperties = threadPoolProperties;
     }
 
@@ -120,7 +120,7 @@ public class ThreadPoolHolder {
                     new ThreadFactoryBuilder()
                             .setNamePrefix(this.threadPoolProperties.getPrefixName() + "-")
                             .setUncaughtExceptionHandler(
-                                    (thread, throwable) -> log.error("ThreadPoolHolder => UncaughtExceptionHandler Thread[{}] execute exception. ErrorMessage:{}.", thread, throwable)).build(),
+                                    (thread, throwable) -> log.error("ThreadPoolHandler => UncaughtExceptionHandler Thread[{}] execute exception. ErrorMessage:{}.", thread, throwable)).build(),
                     ThreadPoolRejectedHandler.abortPolicy()) {
                 @Override
                 protected void afterExecute(Runnable r, Throwable t) {
@@ -128,12 +128,12 @@ public class ThreadPoolHolder {
                         try {
                             ((FutureTask<?>) r).get();
                         } catch (Exception e) {
-                            log.error("ThreadPoolHolder => AfterExecute. Runnable[{}] execute exception. ErrorMessage:{}.", r, e.getMessage());
+                            log.error("ThreadPoolHandler => AfterExecute. Runnable[{}] execute exception. ErrorMessage:{}.", r, e.getMessage());
                         }
                     }
                 }
             };
-            log.info("ThreadPoolHolder => Init threadPoolExecutor {prefixName:{}, coreSize:{}, maxSize:{}, keepAliveTime:{}ms, blockQueueLength:{}}.",
+            log.info("ThreadPoolHandler => Init threadPoolExecutor {prefixName:{}, coreSize:{}, maxSize:{}, keepAliveTime:{}ms, blockQueueLength:{}}.",
                     this.threadPoolProperties.getPrefixName(),
                     this.threadPoolProperties.getCorePoolSize(),
                     this.threadPoolProperties.getMaximumPoolSize(),

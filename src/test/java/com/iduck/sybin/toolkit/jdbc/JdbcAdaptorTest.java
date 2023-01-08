@@ -2,7 +2,7 @@ package com.iduck.sybin.toolkit.jdbc;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.iduck.sybin.toolkit.jdbc.bean.JdbcAdapter;
-import com.iduck.sybin.toolkit.jdbc.bean.TransactionUtils;
+import com.iduck.sybin.toolkit.jdbc.bean.TransactionHandler;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,7 @@ public class JdbcAdaptorTest {
     JdbcTemplate jdbcTemplate;
 
     @Autowired
-    TransactionUtils transactionUtils;
+    TransactionHandler transactionUtils;
 
     /**
      * 测试主键冲突异常,未处理事务回滚
@@ -110,7 +110,7 @@ public class JdbcAdaptorTest {
         druidDataSource.setPassword("root");
         DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();
         dataSourceTransactionManager.setDataSource(druidDataSource);
-        TransactionStatus status = TransactionUtils.beginTransaction(dataSourceTransactionManager);
+        TransactionStatus status = TransactionHandler.beginTransaction(dataSourceTransactionManager);
         JdbcTemplate jdbcTemplate = new JdbcTemplate(druidDataSource);
         ArrayList<String> dataList = new ArrayList<>();
         dataList.add("song");
@@ -121,11 +121,11 @@ public class JdbcAdaptorTest {
                     (ps, data) -> {
                         ps.setObject(1, data);
                     });
-            TransactionUtils.commitTransaction(dataSourceTransactionManager, status);
+            TransactionHandler.commitTransaction(dataSourceTransactionManager, status);
             System.out.println("插入成功!");
         } catch (Exception e) {
             System.out.println("插入失败,手动事务回滚!");
-            TransactionUtils.rollbackTransaction(dataSourceTransactionManager, status);
+            TransactionHandler.rollbackTransaction(dataSourceTransactionManager, status);
         }
     }
 }

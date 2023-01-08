@@ -14,7 +14,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
  * @since 2022/12/28
  **/
 @Configuration
-public class JdbcAdaptorConfig {
+public class JdbcAdapterAutoConfiguration {
 
     @Bean
     @ConditionalOnMissingBean(JdbcAdapter.class)
