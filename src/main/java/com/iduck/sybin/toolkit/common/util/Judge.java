@@ -13,7 +13,7 @@ import java.util.Map;
  * @copyright 2023-2099 SongYanBin All Rights Reserved.
  * @since 2023/1/8
  **/
-public class FcUtils {
+public class Judge {
     /**
      * 若为true则执行逻辑
      *
@@ -72,7 +72,6 @@ public class FcUtils {
                     falseHandle.run();
                 } else {
                     trueHandle.run();
-
                 }
             } else if (obj instanceof Map) {
                 if (((Map<?, ?>) obj).size() == 0) {
@@ -81,12 +80,12 @@ public class FcUtils {
                     trueHandle.run();
                 }
             } else {
-                throw new RuntimeException("FcUtils ==> This type of data is not supported.");
+                throw new RuntimeException("Judge ==> This type of data is not supported.");
             }
         };
     }
 
-    private FcUtils() {
+    private Judge() {
 
     }
 }

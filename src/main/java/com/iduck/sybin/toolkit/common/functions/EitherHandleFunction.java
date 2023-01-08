@@ -15,5 +15,5 @@ public interface EitherHandleFunction {
      * @param trueHandle  true分支处理逻辑
      * @param falseHandle false分支处理逻辑
      */
-    void rightOrLeft(Runnable trueHandle, Runnable falseHandle);
+    void oneOf(Runnable trueHandle, Runnable falseHandle);
 }
