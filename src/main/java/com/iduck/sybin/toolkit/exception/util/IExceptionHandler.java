@@ -47,7 +47,11 @@ public class IExceptionHandler {
         T instance = instance(clazz);
         instance.setCode(code);
         instance.setLocalMsg(localMsg);
-        throw instance;
+        try {
+            throw instance;
+        } catch (BaseException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /**

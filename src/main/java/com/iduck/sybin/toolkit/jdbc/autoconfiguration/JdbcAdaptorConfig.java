@@ -1,4 +1,4 @@
-package com.iduck.sybin.toolkit.jdbc.config;
+package com.iduck.sybin.toolkit.jdbc.autoconfiguration;
 
 import com.iduck.sybin.toolkit.jdbc.util.JdbcAdapter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;

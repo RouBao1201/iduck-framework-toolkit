@@ -1,4 +1,4 @@
-package com.iduck.sybin.toolkit.rest.config;
+package com.iduck.sybin.toolkit.rest.autoconfiguration;
 
 import com.iduck.sybin.toolkit.rest.util.RestAdapter;
 import okhttp3.OkHttpClient;
@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
  * @since 2022/12/23
  **/
 @Configuration
-public class RestConfig {
+public class RestAutoConfiguration {
 
     @Bean("restTemplate")
     @ConditionalOnMissingBean(RestTemplate.class)

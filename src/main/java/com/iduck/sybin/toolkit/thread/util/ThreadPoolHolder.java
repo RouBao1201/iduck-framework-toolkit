@@ -57,7 +57,7 @@ public class ThreadPoolHolder {
      *
      * @return 活跃线程数量
      */
-    public int activeCount() {
+    public int getActiveCount() {
         return getThreadPool().getActiveCount();
     }
 
@@ -98,7 +98,6 @@ public class ThreadPoolHolder {
     public boolean isTerminated() {
         return getThreadPool().isTerminated();
     }
-
 
     /**
      * 获取线程池（加锁避免多线调用时,一直创建线程池消耗资源）
