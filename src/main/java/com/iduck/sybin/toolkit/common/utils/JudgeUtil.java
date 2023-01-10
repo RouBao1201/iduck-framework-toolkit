@@ -1,4 +1,4 @@
-package com.iduck.sybin.toolkit.common.util;
+package com.iduck.sybin.toolkit.common.utils;
 
 import com.iduck.sybin.toolkit.common.functions.ConsumerFunction;
 import com.iduck.sybin.toolkit.common.functions.EitherHandleFunction;
@@ -13,7 +13,7 @@ import java.util.Map;
  * @copyright 2023-2099 SongYanBin All Rights Reserved.
  * @since 2023/1/8
  **/
-public class Judge {
+public class JudgeUtil {
     /**
      * 若为true则执行逻辑
      *
@@ -48,7 +48,7 @@ public class Judge {
      * @param obj 判断数据
      * @return 分支执行函数
      */
-    public static EitherHandleFunction either(Object obj) {
+    public static EitherHandleFunction trueOrFalse(Object obj) {
         return (trueHandle, falseHandle) -> {
             if (obj == null) {
                 falseHandle.run();
@@ -85,7 +85,7 @@ public class Judge {
         };
     }
 
-    private Judge() {
+    private JudgeUtil() {
 
     }
 }

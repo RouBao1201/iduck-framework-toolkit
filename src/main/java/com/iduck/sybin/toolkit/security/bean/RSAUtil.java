@@ -23,14 +23,14 @@ import java.util.Map;
  * @copyright ©2022-2099 SongYanBin. All rights reserved.
  * @since 2022/12/9
  **/
-public class RSAUtils {
-    private static final Logger log = LoggerFactory.getLogger(RSAUtils.class);
+public class RSAUtil {
+    private static final Logger log = LoggerFactory.getLogger(RSAUtil.class);
 
     private static final String SIGN_RSA = "RSA";
 
     private final SecurityKeyProperties securityKeyProperties;
 
-    public RSAUtils(SecurityKeyProperties securityKeyProperties) {
+    public RSAUtil(SecurityKeyProperties securityKeyProperties) {
         this.securityKeyProperties = securityKeyProperties;
     }
 

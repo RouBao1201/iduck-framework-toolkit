@@ -1,7 +1,7 @@
 package com.iduck.sybin.toolkit.security.autoconfiguration;
 
 import com.iduck.sybin.toolkit.security.properties.JwtProperties;
-import com.iduck.sybin.toolkit.security.bean.JwtUtils;
+import com.iduck.sybin.toolkit.security.bean.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -23,9 +23,9 @@ public class JwtAutoConfiguration {
     JwtProperties jwtProperties;
 
     @Bean("jwtUtils")
-    @ConditionalOnMissingBean(JwtUtils.class)
-    public JwtUtils jwtUtils() {
-        return new JwtUtils(jwtProperties);
+    @ConditionalOnMissingBean(JwtUtil.class)
+    public JwtUtil jwtUtils() {
+        return new JwtUtil(jwtProperties);
     }
 
 }

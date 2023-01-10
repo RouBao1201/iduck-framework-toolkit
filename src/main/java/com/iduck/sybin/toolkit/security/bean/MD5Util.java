@@ -15,15 +15,15 @@ import java.security.NoSuchAlgorithmException;
  * @copyright ©2022-2099 SongYanBin. All rights reserved.
  * @since 2022/12/9
  **/
-public class MD5Utils {
+public class MD5Util {
 
-    private static final Logger log = LoggerFactory.getLogger(MD5Utils.class);
+    private static final Logger log = LoggerFactory.getLogger(MD5Util.class);
 
     private static final String MESSAGE_DIGEST = "MD5";
 
     private final SecurityKeyProperties securityKeyProperties;
 
-    public MD5Utils(SecurityKeyProperties securityKeyProperties) {
+    public MD5Util(SecurityKeyProperties securityKeyProperties) {
         this.securityKeyProperties = securityKeyProperties;
     }
 

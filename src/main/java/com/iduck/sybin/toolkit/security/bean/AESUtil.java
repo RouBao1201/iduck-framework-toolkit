@@ -20,8 +20,8 @@ import java.security.NoSuchAlgorithmException;
  * @copyright ©2022-2099 SongYanBin. All rights reserved.
  * @since 2022/12/9
  **/
-public class AESUtils {
-    private static final Logger log = LoggerFactory.getLogger(AESUtils.class);
+public class AESUtil {
+    private static final Logger log = LoggerFactory.getLogger(AESUtil.class);
 
     /**
      * AES密钥标识
@@ -35,7 +35,7 @@ public class AESUtils {
 
     private final SecurityKeyProperties securityKeyProperties;
 
-    public AESUtils(SecurityKeyProperties securityKeyProperties) {
+    public AESUtil(SecurityKeyProperties securityKeyProperties) {
         this.securityKeyProperties = securityKeyProperties;
     }
 

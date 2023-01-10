@@ -1,4 +1,4 @@
-package com.iduck.sybin.toolkit.common.util;
+package com.iduck.sybin.toolkit.common.utils;
 
 
 import com.iduck.sybin.toolkit.common.constants.RegexConst;
@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
  * @copyright 2022-2099 SongYanBin All Rights Reserved.
  * @since 2022/11/28
  **/
-public class RegexUtils {
+public class RegexUtil {
     /**
      * 验证手机号（简单）
      *
@@ -129,10 +129,10 @@ public class RegexUtils {
     }
 
     public static void main(String[] args) {
-        System.out.println(RegexUtils.isEmail("624142800@qq.com"));
+        System.out.println(RegexUtil.isEmail("624142800@qq.com"));
     }
 
-    private RegexUtils() {
+    private RegexUtil() {
 
     }
 }

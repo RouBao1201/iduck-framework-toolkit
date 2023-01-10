@@ -1,9 +1,9 @@
 package com.iduck.sybin.toolkit.security.autoconfiguration;
 
 import com.iduck.sybin.toolkit.security.properties.SecurityKeyProperties;
-import com.iduck.sybin.toolkit.security.bean.AESUtils;
-import com.iduck.sybin.toolkit.security.bean.MD5Utils;
-import com.iduck.sybin.toolkit.security.bean.RSAUtils;
+import com.iduck.sybin.toolkit.security.bean.AESUtil;
+import com.iduck.sybin.toolkit.security.bean.MD5Util;
+import com.iduck.sybin.toolkit.security.bean.RSAUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -25,20 +25,20 @@ public class SecurityAutoConfiguration {
     SecurityKeyProperties securityKeyProperties;
 
     @Bean("aesUtils")
-    @ConditionalOnMissingBean(AESUtils.class)
-    public AESUtils aesUtils() {
-        return new AESUtils(securityKeyProperties);
+    @ConditionalOnMissingBean(AESUtil.class)
+    public AESUtil aesUtils() {
+        return new AESUtil(securityKeyProperties);
     }
 
     @Bean("md5Utils")
-    @ConditionalOnMissingBean(MD5Utils.class)
-    public MD5Utils md5Utils() {
-        return new MD5Utils(securityKeyProperties);
+    @ConditionalOnMissingBean(MD5Util.class)
+    public MD5Util md5Utils() {
+        return new MD5Util(securityKeyProperties);
     }
 
     @Bean("rsaUtils")
-    @ConditionalOnMissingBean(RSAUtils.class)
-    public RSAUtils rsaUtils() {
-        return new RSAUtils(securityKeyProperties);
+    @ConditionalOnMissingBean(RSAUtil.class)
+    public RSAUtil rsaUtils() {
+        return new RSAUtil(securityKeyProperties);
     }
 }

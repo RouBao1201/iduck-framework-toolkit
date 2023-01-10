@@ -1,4 +1,4 @@
-package com.iduck.sybin.toolkit.exception.util;
+package com.iduck.sybin.toolkit.exception.utils;
 
 import com.iduck.sybin.toolkit.exception.enums.ExceptionEnum;
 import com.iduck.sybin.toolkit.exception.model.BaseException;

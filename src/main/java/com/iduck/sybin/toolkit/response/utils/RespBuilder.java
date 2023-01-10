@@ -1,4 +1,4 @@
-package com.iduck.sybin.toolkit.response.util;
+package com.iduck.sybin.toolkit.response.utils;
 
 import com.iduck.sybin.toolkit.response.enums.RespEnum;
 import com.iduck.sybin.toolkit.response.model.RespResult;

@@ -20,12 +20,12 @@ import java.util.Map;
  * @copyright 2022-2099 SongYanBin All Rights Reserved.
  * @since 2022/12/9
  **/
-public class JwtUtils {
-    private static final Logger log = LoggerFactory.getLogger(JwtUtils.class);
+public class JwtUtil {
+    private static final Logger log = LoggerFactory.getLogger(JwtUtil.class);
 
     private final JwtProperties jwtProperties;
 
-    public JwtUtils(JwtProperties jwtProperties) {
+    public JwtUtil(JwtProperties jwtProperties) {
         this.jwtProperties = jwtProperties;
     }
 

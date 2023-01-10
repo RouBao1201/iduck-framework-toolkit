@@ -1,9 +1,9 @@
-package com.iduck.sybin.toolkit.page.util;
+package com.iduck.sybin.toolkit.page.utils;
 
 import com.github.pagehelper.ISelect;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.iduck.sybin.toolkit.exception.util.IExceptionHandler;
+import com.iduck.sybin.toolkit.exception.utils.IExceptionHandler;
 import com.iduck.sybin.toolkit.page.model.BasePage;
 import com.iduck.sybin.toolkit.page.model.PageResult;
 import com.iduck.sybin.toolkit.response.enums.RespEnum;
@@ -64,7 +64,7 @@ public final class IPageHelper {
         PageResult<R> respResult = new PageResult<>();
         setCommonData(reqDto, respResult);
         respResult.setTotal(0);
-        respResult.setList(new ArrayList<>());
+        respResult.setList(new ArrayList<>(0));
         return respResult;
     }
 
