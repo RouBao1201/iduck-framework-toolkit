@@ -12,6 +12,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * 分页查询工具类
@@ -29,8 +31,8 @@ public final class IPageHelper {
      * @param reqDto 请求体
      * @param select select接口
      * @param clazz  响应类型
-     * @param <T1>   请求类型枚举
-     * @param <T2>   响应类型枚举
+     * @param <T>    请求类型枚举
+     * @param <R>    响应类型枚举
      * @return PageResult分页通用响应体
      */
     public static <T extends BasePage, R> PageResult<R> doStart(T reqDto, ISelect select, Class<R> clazz) {
@@ -49,6 +51,23 @@ public final class IPageHelper {
         respResult.setTotal(pageInfo.getTotal());
         respResult.setList(pageInfo.getList());
         return respResult;
+    }
+
+    /**
+     * 分页查询（带后置处理）
+     *
+     * @param reqDto   请求体
+     * @param select   select接口
+     * @param clazz    响应类型
+     * @param consumer 查询结果后置处理
+     * @param <T>      请求类型枚举
+     * @param <R>      响应类型枚举
+     * @return PageResult分页通用响应体
+     */
+    public static <T extends BasePage, R> PageResult<R> doStartAfter(T reqDto, ISelect select, Class<R> clazz, Consumer<List<R>> consumer) {
+        PageResult<R> pageResult = doStart(reqDto, select, clazz);
+        consumer.accept(pageResult.getList());
+        return pageResult;
     }
 
     /**
@@ -121,6 +140,27 @@ public final class IPageHelper {
         public <T extends BasePage, R> PageResult<R> doStart(T reqDto, ISelect select, Class<R> clazz) {
             if (this.conditionResult) {
                 return IPageHelper.doStart(reqDto, select, clazz);
+            } else {
+                return IPageHelper.doEmpty(reqDto, clazz);
+            }
+        }
+
+        /**
+         * 分页查询（带后置处理）
+         *
+         * @param reqDto   请求体
+         * @param select   select接口
+         * @param clazz    响应类型
+         * @param consumer 查询结果后置处理
+         * @param <T>      请求类型枚举
+         * @param <R>      响应类型枚举
+         * @return PageResult分页通用响应体
+         */
+        public <T extends BasePage, R> PageResult<R> doStartAfter(T reqDto, ISelect select, Class<R> clazz, Consumer<List<R>> consumer) {
+            if (this.conditionResult) {
+                PageResult<R> pageResult = IPageHelper.doStart(reqDto, select, clazz);
+                consumer.accept(pageResult.getList());
+                return pageResult;
             } else {
                 return IPageHelper.doEmpty(reqDto, clazz);
             }
